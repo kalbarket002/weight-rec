@@ -1,0 +1,434 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+
+    --primary: #166534;
+    --primary-dark: #14532d;
+
+    --background: #f3f4f6;
+    --card: #ffffff;
+
+    --text: #111827;
+    --muted: #6b7280;
+
+    --border: #e5e7eb;
+
+    --success: #16a34a;
+
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    padding: 20px;
+}
+
+
+.app {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: auto;
+
+}
+
+
+/* HEADER */
+
+.header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.header h1 {
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+}
+
+
+.header p {
+
+    margin-top: 4px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+}
+
+
+.status {
+
+    font-size: 13px;
+
+    color: var(--success);
+
+}
+
+
+/* CARD */
+
+.card {
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.05);
+
+}
+
+
+.card h2 {
+
+    font-size: 18px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* FORM */
+
+.form-group {
+
+    margin-bottom: 18px;
+
+}
+
+
+label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+select,
+input {
+
+    width: 100%;
+
+    height: 50px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: var(--text);
+
+    font-size: 16px;
+
+    outline: none;
+
+}
+
+
+select:focus,
+input:focus {
+
+    border-color: var(--primary);
+
+}
+
+
+.readonly {
+
+    width: 100%;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 14px;
+
+    background: #f3f4f6;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+}
+
+
+/* BUTTON */
+
+.primary-button {
+
+    width: 100%;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+.primary-button:hover {
+
+    background: var(--primary-dark);
+
+}
+
+
+.primary-button:active {
+
+    transform: scale(0.98);
+
+}
+
+
+/* RESULT */
+
+.result-box {
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    border-radius: 14px;
+
+    background: #ecfdf5;
+
+    border: 1px solid #bbf7d0;
+
+    text-align: center;
+
+}
+
+
+.result-box span {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+.result-box strong {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--primary);
+
+    font-size: 40px;
+
+}
+
+
+.hidden {
+
+    display: none;
+
+}
+
+
+/* HISTORY */
+
+.section-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+
+}
+
+
+.section-header h2 {
+
+    margin: 0;
+
+}
+
+
+.danger-button {
+
+    border: none;
+
+    background: transparent;
+
+    color: #dc2626;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+}
+
+
+/* TABLE */
+
+.table-container {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 500px;
+
+}
+
+
+th {
+
+    background: #f3f4f6;
+
+    padding: 12px 8px;
+
+    text-align: left;
+
+    font-size: 13px;
+
+}
+
+
+td {
+
+    padding: 12px 8px;
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 14px;
+
+}
+
+
+td:last-child {
+
+    font-weight: 700;
+
+    color: var(--primary);
+
+}
+
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    padding: 10px;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    body {
+
+        padding: 12px;
+
+    }
+
+
+    .card {
+
+        padding: 16px;
+
+    }
+
+
+    .header h1 {
+
+        font-size: 22px;
+
+    }
+
+
+    .result-box strong {
+
+        font-size: 34px;
+
+    }
+
+}

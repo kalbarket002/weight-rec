@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#166534"
+    >
+
+    <meta
+        name="description"
+        content="Kalkulator Weight Recovery Eksplorasi Bauksit"
+    >
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <title>Weight Recovery</title>
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div>
+                <h1>Weight Recovery </h1>
+
+                <p>
+                    Bauxite Exploration
+                </p>
+            </div>
+
+            <div class="status">
+                <span id="onlineStatus">
+                    ● Online
+                </span>
+            </div>
+
+        </header>
+
+
+        <!-- CALCULATOR -->
+        <section class="card">
+
+            <h2>Calculate Weight Recovery</h2>
+
+
+            <!-- INTERVAL -->
+            <div class="form-group">
+
+                <label for="interval">
+                    Interval Ore
+                </label>
+
+                <select id="interval">
+
+                    <option value="">
+                        Pilih interval
+                    </option>
+
+                    <option value="0.50">
+                        0.50 m
+                    </option>
+
+                    <option value="0.60">
+                        0.60 m
+                    </option>
+
+                    <option value="0.70">
+                        0.70 m
+                    </option>
+
+                    <option value="0.80">
+                        0.80 m
+                    </option>
+
+                    <option value="0.90">
+                        0.90 m
+                    </option>
+
+                    <option value="1.00">
+                        1.00 m
+                    </option>
+
+                    <option value="1.10">
+                        1.10 m
+                    </option>
+
+                    <option value="1.20">
+                        1.20 m
+                    </option>
+
+                    <option value="1.30">
+                        1.30 m
+                    </option>
+
+                    <option value="1.40">
+                        1.40 m
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- STANDARD WEIGHT -->
+            <div class="form-group">
+
+                <label>
+                    Berat Standar
+                </label>
+
+                <div
+                    id="standardWeight"
+                    class="readonly"
+                >
+                    0.00 kg
+                </div>
+
+            </div>
+
+
+            <!-- FIELD WEIGHT -->
+            <div class="form-group">
+
+                <label for="fieldWeight">
+                    Berat Lapangan
+                </label>
+
+                <input
+                    id="fieldWeight"
+                    type="number"
+                    step="0.01"
+                    min="0"
+                    placeholder="Masukkan berat lapangan"
+                >
+
+            </div>
+
+
+            <!-- BUTTON -->
+            <button
+                id="calculateButton"
+                class="primary-button"
+            >
+                HITUNG
+            </button>
+
+
+            <!-- RESULT -->
+            <div
+                id="resultBox"
+                class="result-box hidden"
+            >
+
+                <span>
+                    WEIGHT REC
+                </span>
+
+                <strong id="weightRecovery">
+                    0.00%
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- HISTORY -->
+        <section class="card">
+
+            <div class="section-header">
+
+                <h2>Riwayat</h2>
+
+                <button
+                    id="clearHistory"
+                    class="danger-button"
+                >
+                    Hapus
+                </button>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Interval</th>
+                            <th>Standar</th>
+                            <th>Lapangan</th>
+                            <th>Weight Rec</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="historyTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            Bauxite Exploration • Weight Recovery
+        </footer>
+
+    </main>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
